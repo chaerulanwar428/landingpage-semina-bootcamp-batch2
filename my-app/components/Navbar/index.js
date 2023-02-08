@@ -1,10 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import NavLink from '../NavLink';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
-// import Button from '../Button';
+import Button from '../Button';
 
 export default function Navbar() {
   const router = useRouter();
@@ -88,7 +87,7 @@ export default function Navbar() {
                       aria-labelledby='navbarDropdown'
                     >
                       <li>
-                        <Link href={'/dashboard'}>
+                        <Link legacyBehavior href={'/dashboard'}>
                           <a className='dropdown-item'>Dashboard</a>
                         </Link>
                       </li>
